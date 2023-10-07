@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/backscreen"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/com_facebook_blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cf"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-3dp" />
+
+    <TextView
+        android:id="@+id/textViewdetailedheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewdetailedheading"
+        android:text="helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo helo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"/>
+    <TextView
+        android:id="@+id/ratingTextheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Rating"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffdf00 "
+        android:text="★★★★★"
+        app:layout_constraintTop_toBottomOf="@+id/ratingTextheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"/>
+    <Button
+        android:id="@+id/callbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="911"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/ratingTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/showInMapsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show in Google Maps"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/callbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
